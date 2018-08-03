@@ -1,30 +1,32 @@
-const Loader = laya.net.Loader;
-const Handler = laya.utils.Handler;
-const WebGL = laya.webgl.WebGL;
-
-const GameStartUI = ui.GameStartUI;
-// const GameStartUI = ui.GameStartUI;
-// const GameStartUI = ui.GameStartUI;
-// const GameStartUI = ui.GameStartUI;
+const Loader = Laya.Loader;
+const Handler = Laya.Handler;
+const WebGL = Laya.WebGL;
+const Event = Laya.Event;
 
 class Main {
     constructor() {
-        init();
+        this._init();
     }
 
-    init() {
+    _init() {
         Laya.MiniAdpter.init();
         Laya.init(480, 800, WebGL);
+        // Laya.stage.scaleMode = "exactfit";
         Laya.stage.scaleMode = "showall";
 
         Laya.loader.load("res/atlas/images.atlas",Handler.create(this,this.gameStart))
     }
 
     gameStart(){
-        const startPage = new GameStartUI();
-        // startPage.
-        Laya.stage.addChild(startPage);
+        Laya.game = new GameIndexUI();
+        Laya.stage.addChild(Laya.game);
+        
+        setTimeout(() => {
+            Laya.game.removeSelf();
+            new GameStart()
+        }, 1000);
+        
+
     }
 }
-
-new Main()
+new Main();
