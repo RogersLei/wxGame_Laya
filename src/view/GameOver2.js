@@ -12,7 +12,7 @@ class GameOver2 extends ui.GameOver2UI{
         })  
         this.btn_play.on(Event.MOUSE_UP,this,()=>{
             this.removeSelf();
-            new GamePlay();
+            this._toPlay();
         })
         this.btn_store.on(Event.MOUSE_UP,this,()=>{
             let parentPage = "GameOver2"
@@ -20,6 +20,18 @@ class GameOver2 extends ui.GameOver2UI{
             new GameStore(parentPage);
         })      
         
+    }
+
+    _toPlay(){
+        this.map = new GameBg();
+        this.play = new GamePlay();
+
+        Laya.timer.frameLoop(1, this, this._loop);
+    }
+
+    _loop() {
+        this.map.updataMap()
+        this.play.updateScore()
     }
     
 }

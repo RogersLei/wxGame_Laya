@@ -1,5 +1,4 @@
 {
-    "x":0,
     "type":"View",
     "selectedBox":1,
     "selecteID":11,
@@ -13,126 +12,33 @@
     "compId":1,
     "child":[
         {
-            "x":15,
-            "type":"Image",
-            "props":{"y":0,"x":0,"width":480,"skin":"images/game_bg-sheet0.png","height":800},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Image",
             "props":{"y":20,"x":30,"skin":"images/scorepanel-sheet0.png"},
             "nodeParent":1,
             "label":"Image",
-            "isDirectory":false,
+            "isOpen":true,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":2,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Clip",
-            "props":{"y":185,"x":174,"skin":"images/player-sheet0.png","index":0,"clipY":1,"clipX":7,"clipWidth":70,"clipHeight":110},
-            "nodeParent":1,
-            "label":"Clip",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":11,
-            "child":[
-                ]
+                {
+                    "type":"Text",
+                    "props":{"y":26,"x":96,"width":103,"var":"text_score","text":"0","overflow":"scroll","height":41,"fontSize":40,"font":"SimHei","color":"#ffab6c","bold":true,"align":"center"},
+                    "nodeParent":2,
+                    "label":"Text(text_score)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":12,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {
             "nodes":[
-                {
-                    "target":11,
-                    "keyframes":{
-                        "var":[
-                            {
-                                "value":null,
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":11,
-                                "key":"var",
-                                "index":0
-                            },
-                            {
-                                "value":"clip_play",
-                                "tweenMethod":"linearNone",
-                                "tween":false,
-                                "target":11,
-                                "key":"var",
-                                "index":1
-                            }],
-                        "index":[
-                            {
-                                "value":0,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":0
-                            },
-                            {
-                                "value":1,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":1
-                            },
-                            {
-                                "value":2,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":2
-                            },
-                            {
-                                "value":3,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":3
-                            },
-                            {
-                                "value":4,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":4
-                            },
-                            {
-                                "value":5,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":5
-                            },
-                            {
-                                "value":6,
-                                "tweenMethod":"linearNone",
-                                "tween":true,
-                                "target":11,
-                                "key":"index",
-                                "index":6
-                            }]
-                    }
-                }],
+                ],
             "name":"player_move",
             "id":1,
             "frameRate":24,
